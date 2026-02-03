@@ -16,7 +16,7 @@ return new class extends Migration
             $table->foreignId('kategori_id')->constrained('kategoris');
             $table->string('kode_barang', 100);
             $table->string('nama_barang');
-            $table->enum('kondisi', ['baik', 'second', 'rusak']);
+            $table->enum('kondisi', ['baru', 'second', 'rusak']);
             $table->integer('stok')->default(0);
             $table->timestamps();
         });
