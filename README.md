@@ -61,9 +61,9 @@ Manage Ticket
 
 ### 👨‍💻 Author
 >Joko Ardiyanto, S.Kom
-  - Universitas Boyolali
-  - Prodi S1 Teknik informatika
-  - Email c20010007@uby.ac.id
+  - IT Support Officer
+  - Alumni Teknik Informatika Universitas Boyolali
+  - Email c20010007@uby.ac.id or jokoardianto12@gmail.com
   - Web https://jokoardiblog.wordpress.com
 
 ### 🙇🏼 Konstribusi 
