@@ -71,6 +71,6 @@ jika anda menemupakn kendala atau bug pada sistem silahkan hubungi [Telegram](ht
 
 
 ### 🔐 License
-Repository created 3 Maret 2022 by Joko Ardiyanto under *MIT License*
+Repository created 5 Februari 2026 by Joko Ardiyanto under *MIT License*
 
 
