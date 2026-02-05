@@ -41,6 +41,23 @@ dan terstruktur.
 - [x] Register dan Login
 - [x] Activasi user baru
 
+### ✔️ Preview
+
+Login User
+
+![Image](https://github.com/user-attachments/assets/15b99cbe-9e85-46ac-9564-49afffa81df4)
+
+Dashboard Admin
+![Image](https://github.com/user-attachments/assets/53de83a7-00f1-4778-9963-17945944fd5b)
+
+Monitoring Stok Realtime
+![Image](https://github.com/user-attachments/assets/b95a1ff4-493d-4ed1-a5a0-70834c9b342e)
+
+Manange Barang
+![Image](https://github.com/user-attachments/assets/8b9755b8-246f-4f46-946a-b2f2ed9b966d)
+
+Manage Ticket
+![Image](https://github.com/user-attachments/assets/62db7fbd-10cf-4bc1-9a32-0d6ce18d90e2)
 
 ### 👨‍💻 Author
 >Joko Ardiyanto, S.Kom
