@@ -73,8 +73,8 @@ class KategoriController extends Controller
         $kategori = Kategori::findOrFail($id);
 
         if($request->hasFile('icon')){
-            Storage::disk('icon')->delete($kategori->icon);
-            $validate['iocn'] = $request->file('icon')->store('assets/images', 'public');
+            Storage::disk('public')->delete($kategori->icon);
+            $validate['icon'] = $request->file('icon')->store('assets/images', 'public');
         }
         $kategori->update($validate);
 
