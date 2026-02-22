@@ -25,7 +25,7 @@
 
       @role('admin')
        <li class="nav-item">
-        <a class="nav-link collapsed" href="{{ route('admin.user.index') }}">
+        <a class="nav-link active {{ request()->routeIs('admin.user.index') ? 'active' : 'collapsed' }}" href="{{ route('admin.user.index') }}">
           <i class="bi bi-layout-text-window-reverse"></i>
           <span>Data User</span>
         </a>
@@ -124,7 +124,7 @@
         </a>
       </li><!-- End Data Nav -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="{{ route('user.ticketing.index') }}">
+        <a class="nav-link {{ request()->routeIs('user.ticketing.index') ? 'active' : 'collapsed' }}" href="{{ route('user.ticketing.index') }}">
           <i class="bi bi-layout-text-window-reverse"></i>
           <span>My Tickets</span>
         </a>
