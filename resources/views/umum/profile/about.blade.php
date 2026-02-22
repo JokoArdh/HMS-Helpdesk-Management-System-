@@ -45,8 +45,8 @@
                         <i class="bi bi-tags me-1"></i> Informasi Versi
                     </h6>
                     <ul class="list-unstyled mb-0">
-                        <li><strong>Versi:</strong><span class="badge bg-success">v1.0.0</span></li>
-                        <li><strong>Rilis:</strong> <span class="badge bg-secondary">Januari 2026</span></li>
+                        <li><strong>Versi:</strong><span class="badge bg-success">v1.0.2</span></li>
+                        <li><strong>Rilis:</strong> <span class="badge bg-secondary">22 Februari 2026</span></li>
                         <li><strong>Status:</strong><span class="badge bg-primary">Stable</span></li>
                     </ul>
                 </div>
