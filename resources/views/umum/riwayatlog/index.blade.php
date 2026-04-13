@@ -29,7 +29,7 @@
                     <th>Bukti</th>
                     <th>Faktor</th>
                     <th>Tanggal</th>
-                    <th>Action</th>
+                    <th colspan="3">Action</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -47,6 +47,14 @@
                                             ? route('admin.logtrobel.edit', $trobel->id) 
                                             : route('it.logtrobel.edit', $trobel->id) }}" 
                                    class="text-warning me-2"><i class="bi bi-pencil-square fs-5"></i></a>
+                                
+                                     <!-- SHOW -->
+                                <a href="{{ auth()->user()->hasRole('admin') 
+                                      ? route('admin.logtrobel.show', $trobel->id) 
+                                      : route('it.logtrobel.show', $trobel->id) }}" 
+                                      class="text-info me-2" title="Lihat Data">
+                                      <i class="bi bi-eye fs-5"></i>
+                                </a>
 
                                     <form action="{{ auth()->user()->hasRole('admin') 
                                                     ? route('admin.logtrobel.destroy', $trobel->id) 
