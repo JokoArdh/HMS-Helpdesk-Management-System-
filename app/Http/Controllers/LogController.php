@@ -64,7 +64,10 @@ class LogController extends Controller
      */
     public function show(string $id)
     {
-       
+       $trobel = LogTrobel::findOrFail($id);
+       return view('umum.riwayatlog.show', [
+        'title' => 'Detail Data'
+       ], compact('trobel'));
     }
 
     /**
