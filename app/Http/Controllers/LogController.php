@@ -91,10 +91,12 @@ class LogController extends Controller
         $trobel = LogTrobel::findOrFail($id);
 
         //jika ada gambar dan hapus gambar lama
-        if($request->hasFile('gambar')){
-            Storage::disk('public')->delete($trobel->gambar);
+        if ($request->hasFile('gambar')) {
 
-            //update gambar baru
+            if ($trobel->gambar && Storage::disk('public')->exists($trobel->gambar)) {
+                Storage::disk('public')->delete($trobel->gambar);
+            }
+        
             $validate['gambar'] = $request->file('gambar')->store('assets/images', 'public');
         }
         $trobel->update($validate);
