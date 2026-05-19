@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use RealRashid\SweetAlert\Facades\Alert;
+use Illuminate\Support\Facades\Http;
 
 class UserKeluhanController extends Controller
 {
@@ -59,7 +60,7 @@ class UserKeluhanController extends Controller
             'bukti' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
         ]);
 
-        DB::transaction(function () use ($request) {
+        DB::transaction(function () use ($request, &$keluhan) {
             
             //insert keluhan
             $keluhan = Keluhan::create([
@@ -78,6 +79,26 @@ class UserKeluhanController extends Controller
                 'catatan' => null,
             ]);
         });
+            // =========================
+            // KIRIM TELEGRAM
+            // =========================
+
+            $message =
+            "📌 TICKET BARU\n\n" .
+            "👤 User : " . auth()->user()->name . "\n" .
+            "📂 Kategori : {$keluhan->kategori}\n" .
+            "📝 Keluhan : {$keluhan->keterangan}\n" .
+            "📅 Tanggal : {$keluhan->tgl_keluhan}\n" .
+            "📍 Status : Pending";
+
+            Http::post(
+            'https://api.telegram.org/bot' . env('TELEGRAM_BOT_TOKEN') . '/sendMessage',
+            [
+            'chat_id' => env('TELEGRAM_CHAT_ID'),
+            'text' => $message,
+            ]
+            );
+
         Alert::success('Success', 'Form created Successfully');
         return redirect()->back();
     }
